@@ -26,18 +26,27 @@ public class Utilities extends BaseClass{
 	}
 	
 	public static void jsClick(WebElement element) {
-		JavascriptExecutor executor = (JavascriptExecutor) driver;
-		executor.executeAsyncScript("arguments[0].click();", element);
+		JavascriptExecutor executor = (JavascriptExecutor) driver; //casting - changing the type of the object
+		executor.executeScript("arguments[0].click();", element);
 	}
 	
 	public static void elementScroll(WebElement element) {
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
-		executor.executeAsyncScript("arguments[0].scrollIntoView", element);
+		executor.executeScript("arguments[0].scrollIntoView", element);
 	}
-	public static void scrollToBottomPage(WebElement element) {
+	
+	public static void scrollToBottomPage() {
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
-		executor.executeAsyncScript(null, element);
+		executor.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+		
 	}
+	
+	public static void scrollToTopPage() {
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
+		executor.executeScript("window.scrollTo(0,0)");
+		
+	}
+	
 	
 	
 	}
