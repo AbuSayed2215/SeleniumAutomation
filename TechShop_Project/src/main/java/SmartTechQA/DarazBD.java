@@ -19,7 +19,7 @@ public class DarazBD {
 		
 		driver.manage().window().maximize();
 		
-		driver.findElement(By.id("q")).sendKeys("Shari");
+		driver.findElement(By.cssSelector("#q")).sendKeys("panjabi");
 		
 		driver.findElement(By.id("q")).sendKeys(Keys.ENTER);
 	}
