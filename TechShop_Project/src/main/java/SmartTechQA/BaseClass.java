@@ -1,5 +1,6 @@
 package SmartTechQA;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -15,7 +16,7 @@ public class BaseClass {
 	public static WebDriver driver;
 
 	
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws InterruptedException, IOException {
 		
 		BaseClass.SetUp();
 		
@@ -23,7 +24,7 @@ public class BaseClass {
 		
 		
 			
-	public static void SetUp() throws InterruptedException	{
+	public static void SetUp() throws InterruptedException, IOException	{
 		
 		WebDriverManager.chromedriver().setup();
 		
@@ -52,6 +53,8 @@ public class BaseClass {
 		
 		driver.findElement(By.id("email")).sendKeys("abusayed@gmail.com");
 		driver.findElement(By.id("password")).sendKeys("123456");
+		Utilities.takeScreenShot();
+		
 		Thread.sleep(7000);
 		driver.findElement(By.xpath("//button[@class='btn btn-primary']")).click();
 		driver.findElement(By.xpath("//a[@href='/cart']")).click();
