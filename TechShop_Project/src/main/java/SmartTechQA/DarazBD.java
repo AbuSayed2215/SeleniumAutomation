@@ -21,6 +21,8 @@ public class DarazBD {
 		
 		driver.findElement(By.cssSelector("#q")).sendKeys("panjabi");
 		
-		driver.findElement(By.id("q")).sendKeys(Keys.ENTER);
+		driver.findElement(By.xpath("(//a[@class='grey'])[2]")).click();
+		
+		//driver.findElement(By.id("q")).sendKeys(Keys.ENTER);
 	}
 }
