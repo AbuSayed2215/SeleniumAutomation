@@ -28,15 +28,22 @@ public class BaseClass {
 		
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
+		
+		
 		driver.get("https://www.smarttechqa.com/");
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-//		driver.findElement(By.xpath("//a[@class='active navbar-brand']")).click();
-		driver.findElement(By.name("q")).sendKeys("iphone");
-		driver.findElement(By.name("q")).submit();
+		//driver.findElement(By.xpath("//a[@href='/login']")).click();
+		//driver.findElement(By.name("q")).sendKeys("iphone");
+		//driver.findElement(By.name("q")).submit();
 		
-	}}
-		/*
+	
+	}
+	public static void main(String[] args) throws InterruptedException, IOException {
+		//BaseClass.SetUp();
+	}
+	}
+	/*
 		Thread.sleep(1000);
 		driver.findElement(By.name("q")).sendKeys("iphone");
 		driver.findElement(By.name("q")).submit();

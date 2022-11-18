@@ -43,7 +43,9 @@ public void i_click_on_the_login_button() {
 
 @Then("I suppouse to get a error message")
 public void i_suppouse_to_get_a_error_message() {
-	
+	String expected = "Invalid email or password";
+	String actual = driver.findElement(By.xpath("//div[@class='fade alert alert-danger show']")).getText();
+	Assert.assertEquals(actual, expected);
     
 }
 @Then("close the browser")

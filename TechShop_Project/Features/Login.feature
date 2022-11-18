@@ -1,37 +1,36 @@
-
 @smoke
 Feature: Testing Login functionality to the application
 
-#comments
+  #Comment
+  #Background: Optional. You have to put all the common steps
+  #Description: What is in the requirement
+  Scenario: User can Login using the correct username and password
+    Given User opens the browser
+    And User navigates to "https://www.smarttechqa.com"
+    When User clicks on the Sign In button
+    And User Enters the email
+    And User Enters the password
+    And User clicks on the login in button
+    Then The user is successfully logged in and username is displayed
+    And User is navigated to home page
 
-#Background: Optinal, You have to put all the common steps
-#Description: What is the requirement.
-Scenario: User can Login using the correct username and password
+  Scenario: User is able to search the products
+    Description: This scenario tests how to search for products
 
+    When User clicks on the Search Box and Searches for "iphone 11"
+    And User clicks on the Search Button
+    Then User can search for the "iphone" item
 
-When User clicks the Sign in button
-And User Enters the email
-And User Enters the password
-And User Clicks on the Sign In button
-Then The user is successfully logged in and username is displayed 
-And User is navigate to home page
+  Scenario: User is able to click on the latest products from the home page
+    Description: This scenario checks the latest product
 
-@Smoke01
-Scenario: User is able to search the products
-Description: This scernario tests how to search products.
-When User click on the Search box and searches for "iPhone"
-And User clicks on the search Button
-Then User will find the specific item
+    When User clicks on the latest product from the homepage
+    Then User is able to view the item
 
-@Regression
-Scenario: User is able to click on the latest products from the home page
-Description: This scenario checks the lates product
-When User clicks on the latest producyt from the homepage
-Then User is able to see the latest product
+  Scenario: User is able to click on the cart button
+    When User clicks on the cart button
+    Then User is navigated to the Cart Page
+    Then I can validate user payment
 
-Scenario: User is able to click on the cart button
-When User clicks on the cart button
-Then User is navigated to the Cart Page
-
-Scenario: This scenario will run without Given and When 
-Then I want to check user is able to pay for the item
+  Scenario: This is a scenario without a given or when
+    Then I want to check user is able to pay for the item
