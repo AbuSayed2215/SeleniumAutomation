@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Automation Testing]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default Testing(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Failed suite [Failed suite [Failed suite [Default suite]]]]">
+  <test thread-count="5" name="Default test(failed)(failed)(failed)(failed)">
     <classes>
-      <class name="com.smarttechqa.runner.FeatureRunner">
+      <class name="com.smarttechqa.testng.TestngPractice">
         <methods>
-          <include name="runScenario" invocation-numbers="0 1 2 3 8"/>
-          <include name="tearDownClass"/>
-          <include name="setUpClass"/>
+          <include name="googleSearch"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- com.smarttechqa.runner.FeatureRunner -->
+      </class> <!-- com.smarttechqa.testng.TestngPractice -->
     </classes>
-  </test> <!-- Default Testing(failed) -->
-</suite> <!-- Failed suite [Automation Testing] -->
+  </test> <!-- Default test(failed)(failed)(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Failed suite [Failed suite [Default suite]]]] -->

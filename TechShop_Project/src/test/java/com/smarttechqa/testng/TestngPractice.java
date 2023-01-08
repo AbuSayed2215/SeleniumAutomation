@@ -22,12 +22,19 @@ public class TestngPractice {
 		driver.get("https://www.google.com/");
 	}
 	
-	@Test
+	@Test (priority=1 )
 	public void googleSearch() {
+		driver.findElement(By.name("q")).sendKeys("Christmass");
+		driver.findElement(By.name("q")).submit();
+		driver.findElement(By.xpath("//h3[@class='LC20lb MBeuO DKV0Md']")).click();
+	}
+	@Test (priority=0 )
+	public void google() {
 		driver.findElement(By.name("q")).sendKeys("helloworld");
 		driver.findElement(By.name("q")).submit();
 		driver.findElement(By.xpath("//h3[@class='LC20lb MBeuO DKV0Md']")).click();
 	}
+		
 	@Test(enabled = true)
 	public void imageSearch() {
 		driver.findElement(By.linkText("Images")).click();
